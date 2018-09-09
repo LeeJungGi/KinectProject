@@ -55,7 +55,7 @@ uint32 Connector::Run()
 				UE_LOG(LogClass, Warning, TEXT("Connection!!!!!!!!!"));
 
 				TUniquePtr<Sender> temp = MakeUnique<Sender>(
-					Sender(ConnectionSocket, KinectBodyData, ThreadCount++)
+					ConnectionSocket, KinectBodyData, ThreadCount++)
 					);
 
 				SendThreads.Push(temp);
